@@ -260,56 +260,6 @@ def rand_faces(num=10, num_imgs=1):
         torchvision.utils.save_image(g_synthetic_img.data, './imgs/img_%d.jpg'%c, nrow=num, padding=2)
 
 
-# def show_synthetic_comp(nrows=4, ncolumns=4, num_student=0):
-#
-#     load_g_model()
-#     G_model.eval()
-#
-#     bs = nrows * ncolumns
-#
-#     z = torch.randn((bs, args.z_dim, 1, 1))
-#     # z = torch.load('../models/z_.pth')
-#
-#     y_fake_label = torch.ones(int(bs)).type(torch.LongTensor)  # half for each class
-#     # y_fake_label_2 = torch.zeros(int(bs/2)).type(torch.LongTensor)
-#
-#     # y_fake_label = torch.cat([y_fake_label, y_fake_label_2], dim=0)
-#
-#     y_one_hot_fake = torch.zeros(bs, args.class_num, 1, 1)
-#     y_one_hot_fake.scatter_(1, y_fake_label.view(bs, 1, 1, 1), 1)
-#
-#     if args.cuda:
-#         z = z.cuda()
-#         y_one_hot_fake = y_one_hot_fake.cuda()
-#
-#     # torch.save(z, '../models/z1.pth') # idx 12
-#     # torch.save(z, '../models/z2.pth')  # idx 1     idx 11 12 13
-#     # torch.save(z, '../models/z3.pth') # idx 6 7 8
-#     # torch.save(z, '../models/z4.pth') # idx 11 12 16
-#     # torch.save(z, '../models/z5.pth') # idx 1 6
-#     # torch.save(z, '../models/z6.pth') # idx 8
-#     # torch.save(z, '../models/z7.pth') # idx 0 idx 16
-#     # torch.save(z, '../models/z8.pth') # idx 0, 2, idx 12
-#     # torch.save(z, '../models/z9.pth') # idx 18
-#
-#     g_synthetic_img = G_model(z, y_one_hot_fake)
-#     torchvision.utils.save_image(g_synthetic_img, '../imgs/cgan_teacher.jpg', nrow=nrows, padding=2)
-#
-#     if num_student > 0:
-#
-#         load_sg_model('../models/cgan_distill/dark_final/Distilled_G_Epoch_10.pth')
-#         # load_sg_model('../models/Distilled_G_Epoch_5.pth')
-#         SG_model.eval()
-#
-#         sg_synthetic_img = SG_model(z, y_one_hot_fake)
-#         torchvision.utils.save_image(sg_synthetic_img, '../imgs/cgan_distill_dark50.jpg', nrow=nrows, padding=2)
-#
-#     if num_student > 1:
-#         load_sg_model('../models/cgan_distill/img_final/Distilled_G_Epoch_15.pth')
-#         SG_model.eval()
-#
-#         sg_synthetic_img = SG_model(z, y_one_hot_fake)
-#         # torchvision.utils.save_image(sg_synthetic_img, '../imgs/cgan_distill_img.jpg', nrow=nrows, padding=2)
-#         torchvision.utils.save_image(sg_synthetic_img, '../imgs/cgan_distill_img4.jpg', nrow=nrows, padding=2)
+
 
 
