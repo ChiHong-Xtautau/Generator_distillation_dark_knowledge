@@ -235,7 +235,7 @@ def load_sg_model(f_dir):
     SG_model.load_state_dict(torch.load(f_dir))
 
 
-def rand_faces(num=4, num_imgs=1):
+def rand_faces(num=10, num_imgs=1):
     load_g_model()
     # m = G_model
 
