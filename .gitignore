@@ -2,3 +2,4 @@ imgs
 models
 __*
 *.pyc
+.idea
