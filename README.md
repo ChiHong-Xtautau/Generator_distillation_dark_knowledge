@@ -12,3 +12,11 @@ The project is developed under python 3.8.10
 
 - pip install -r requirements.txt
 - python run.py
+
+# Expected Results
+After running the example "run.py", we can get the following expected Results. Please note that due to randomness, the final results you have may differ slightly from what is shown here.
+
+- the distilled student generators will be saved in "./models"
+- the sampling results from the student will be saved in "./imgs/img_0.jpg"
+
+![the expected sampling results from the student](./img_readme.jpg)
