@@ -18,5 +18,6 @@ After running the example "run.py", we can get the following expected Results. P
 
 - the distilled student generators will be saved in "./models"
 - the sampling results from the student will be saved in "./imgs/img_0.jpg"
+- an example of the expected sampling results from the student
 
-![the expected sampling results from the student](./img_readme.jpg)
+![](./img_readme.jpg)
